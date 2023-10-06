@@ -3120,6 +3120,44 @@ struct Foo {}
 struct Foo {}
 ```
 
+#### `true`:
+
+```rust
+fn lorem<T : Eq>(t : T) {
+    let lorem : Dolor = Lorem {
+        ipsum : dolor,
+        sit : amet,
+    };
+}
+```
+
+See also: [`space_after_colon`](#space_after_colon).
+
+## `space_out_brackets`
+
+Adds spaces after symbols (, <, [ and before ), >, ] 
+- **Default value**: `false`
+- **Possile values**: `true`, `false`
+#### `false` (default)
+```rust
+fn some_func<Type1, Type2>(param1 : Type1, param2 : Type2) -> Result<Type1, Error>
+{
+  let v1 = vec![1, 2, 3];
+
+  return Some(param1);
+}
+```
+#### `true` 
+```rust
+#[ some_macro ]
+fn some_func< Type1, Type2 >( param1 : Type1, param2 : Type2 ) -> Result< Type1, Error >
+{
+  let v1 = vec![ 1, 2, 3 ];
+
+  return Some( param1 );
+}
+```
+
 # Internal Options
 
 ## `emit_mode`
